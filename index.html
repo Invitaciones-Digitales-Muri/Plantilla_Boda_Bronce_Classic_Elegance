@@ -26,6 +26,7 @@
 	    <meta name="twitter:data1" content="6 minutos">
     </head>
     <body>
+		<!-- Inicio Mensaje de presentación -->
         <div id="Bienvenida">
             <div class="modal-bienvenida">
                 <h2>Nuestra boda</h2>
@@ -36,7 +37,7 @@
             </div>
         </div>
 
-        <!-- Portada -->
+        	<!-- Portada -->
         <div class="Imagen_Cabezera">
             <img src="https://jesusmurillo31.github.io/Boda-Jesus-Stefany/images/Novios/Novios_2_300x450.png" class="foto-portada" alt="Novios">
             
@@ -47,13 +48,14 @@
             </div>
         </div>
 
-        <!-- Mensaje de los novios para los invitados -->
+        	<!-- Mensaje de los novios para los invitados -->
         <section class="Mensaje_de_los_novios">
             <p>En compañia de nuestra familia queremos compartir con ustedes la union de nuestro amor eterno.</p>
             <p>18 de diciembre de 2026</p>
         </section>
+		<!-- Fin de Mensaje de presentación -->
 
-        <!-- Linea divisora con corazon -->
+        	<!-- Linea divisora con corazon -->
         <div class="divisor">
             <span class="linea"></span>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#555">
@@ -62,7 +64,7 @@
             <span class="linea"></span>
         </div>
 
-        <!-- Seccion Padres de los novios -->
+        <!-- Inicio Seccion Padres de los novios -->
         <div class="Padres">
             <div class="Imagen_Novio">
                 <img src="https://jesusmurillo31.github.io/Boda-Jesus-Stefany/images/Iconos/Icono_Novio.png" alt="Imagen_Novio">
@@ -86,8 +88,9 @@
                 <p>Javier Arias Muñoz</p>
             </section>
         </div>
+		<!-- Fin de Seccion Padres de los novios -->
 
-        <!-- Linea divisora con corazon -->
+        	<!-- Linea divisora con corazon -->
         <div class="divisor">
             <span class="linea"></span>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#555">
@@ -96,7 +99,8 @@
             <span class="linea"></span>
         </div>
 
-        <!-- Novios -->
+<!--        	 Mover a Mensaje de presentacion 
+						(Seccion Novios) 
         <section class="Novios">
             <h2>Novios</h2>
             <p>Jesus Angel Murillo Gonzalez</p>
@@ -104,17 +108,10 @@
 
             <div class="img-placeholder"></div>
         </section>
-
-        <!-- Linea divisora con corazon -->
-        <div class="divisor">
-            <span class="linea"></span>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#555">
-                <path d="M12 21s-6-4.35-9-7.5C-1 9.5 2 4 6.5 4c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3C22 4 25 9.5 21 13.5 18 16.65 12 21 12 21z"/>
-            </svg>
-            <span class="linea"></span>
-        </div>
-
-        <!-- Galeria -->
+-->
+		
+		<!-- Inicio seccion fotos en invitacion tipo galeria -->
+        	<!-- Galeria -->
         <section class="Galeria">
             <h2>Galería</h2>
             
@@ -132,8 +129,9 @@
                 <button class="boton_galeria siguiente" onclick="moverSlide(1)"> ❯ </button>
             </div>
         </section>
+		<!-- Fin de seccion fotos en invitacion tipo galeria -->
 
-        <!-- Linea divisora con corazon -->
+        	<!-- Linea divisora con corazon -->
         <div class="divisor">
             <span class="linea"></span>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#555">
@@ -142,7 +140,8 @@
             <span class="linea"></span>
         </div>
 
-        <!-- Detalles del evento -->
+		<!-- Inicio Ceremonia -->
+        	<!-- Detalles del evento -->
         <section class="section">
             <h2>Detalles del Evento</h2>
 
@@ -157,8 +156,10 @@
 
                 <a class="boton" href="https://maps.app.goo.gl/L3aadSs4Lb7kSXg1A" target="_blank">Ver ubicación</a>
             </div>
+		<!-- Fin de Ceremonia -->
 
-            <!-- Seccion casino -->
+		<!-- Inicio Recepcion -->
+        	<!-- Seccion casino -->
             <div class="evento">
                 <img src="https://jesusmurillo31.github.io/Boda-Jesus-Stefany/images/Iconos/Icono_Anillos.png" class="Icono_Casino">
                 <h3>Recepción Casino</h3>
@@ -169,16 +170,7 @@
                 
                 <a class="boton" href="https://maps.app.goo.gl/s5nSYLFpTTE2Kg3K7" target="_blank">Ver ubicación</a>
             </div>
-            
-            <!-- Seccion vestimenta -->
-            <div class="evento">
-                <img src="https://jesusmurillo31.github.io/Boda-Jesus-Stefany/images/Iconos/Icono_Vestimenta.png" class="Icono_Vestimenta">
-                <h3>Codigo de vestimenta</h3>
-
-                <p>Formal</p>
-                <p>¡No utilizar color blanco!</p>
-            </div>
-        </section>
+		<!-- Fin de Recepcion -->
 
         <!-- Linea divisora con corazon -->
         <div class="divisor">
@@ -188,49 +180,6 @@
             </svg>
             <span class="linea"></span>
         </div>
-
-
-        <!-- Cuenta Regresiva -->
-        <section class="section contador-wrapper" aria-labelledby="ttl-contador">
-            <h2 id="ttl-contador">Faltan</h2>
-
-            <!-- Contador -->
-            <div id="contador"
-                class="contador"
-                role="timer"
-                aria-live="polite"
-                data-fecha="2026-12-18"
-                data-hora="16:00"
-                data-zona="local">
-            
-                <!-- Bloque Dias -->
-                <div class="bloque">
-                    <span class="valor" id="cd-d">--</span>
-                    <small>Días</small>
-                </div>
-                
-                <!-- Bloque Horas -->
-                <div class="bloque">
-                    <span class="valor" id="cd-h">--</span>
-                    <small>Horas</small>
-                </div>
-                
-                <!-- Bloque Minutos -->
-                <div class="bloque">
-                    <span class="valor" id="cd-m">--</span>
-                    <small>Min</small>
-                </div>
-                
-                <!-- Bloque Segundos -->
-                <div class="bloque">
-                    <span class="valor" id="cd-s">--</span>
-                    <small>Seg</small>
-                </div>
-            </div>
-
-          <!-- Mensaje cuando llegue el gran día -->
-            <p id="contador-msg" class="contador-msg" hidden>¡Llegó nuestro gran día! 💍🎉</p>
-        </section>
 
         <!-- Logo final de novios -->
         <section class = "Logo_Novios">
@@ -247,6 +196,7 @@
             <span class="linea"></span>
         </div>
 
+		<!-- Convertir a confirmacion por Whatsapp -->	
         <!-- Confirmacion -->
         <section class="Confirmacion">
             <h2>Confirma tu asistencia</h2>
@@ -269,14 +219,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Boton de musica -->
-        <audio id="musica">
-            <source src="https://jesusmurillo31.github.io/Boda-Jesus-Stefany/Musica/Mi Corazón Encantado_Piano Tutorial 2026.mp3" type="audio/mpeg">
-            <source src="https://jesusmurillo31.github.io/Boda-Jesus-Stefany/Musica/Mi Corazón Encantado_Piano Tutorial 2026_copia.ogg" type="audio/ogg">
-        </audio>
-
-        <button id="botonMusica" onclick="toggleMusica()"> Reproducir </button>
 
         <!-- Pie de pagina -->
         <footer class="Pie_de_pagina">
