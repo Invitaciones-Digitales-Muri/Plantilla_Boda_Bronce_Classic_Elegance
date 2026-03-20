@@ -1,57 +1,3 @@
-#Bienvenida{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.55);
-    backdrop-filter:blur(3px);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:3000;
-}
-
-.modal-bienvenida{
-    background:white;
-    padding:40px 50px;
-    border-radius:15px;
-    text-align:center;
-    max-width:400px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-.modal-bienvenida h2{
-    font-family:'Great Vibes', cursive;
-    font-size:50px;
-    margin-bottom:5px;
-}
-
-.modal-bienvenida h1{
-    font-family:'Great Vibes', cursive;
-    font-size: 40px;
-    margin-bottom: 25px;
-}
-
-.modal-bienvenida p{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 25px;
-    margin-bottom: 25px;
-}
-
-.modal-bienvenida button{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 25px;
-    padding:12px 30px;
-    border-radius:25px;
-    border:2px solid #555;
-    background:white;
-    font-weight:bold;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
-    cursor: pointer;
-}
-
-body.modal-activo{
-    overflow: hidden;
-}
-
 /* Cuerpo del HTML */
 body{
     margin:0;
@@ -60,37 +6,6 @@ body{
     background:#e4e4e4;
     padding-left: 0px;
     padding-right: 0px;
-}
-
-#botonMusica{
-    position: fixed;
-    Top:10px;
-    left: 10px;
-    padding: 14px 25px;
-    background: rgba(30, 30, 30, 0.55);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari */
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 50px;
-    color: #ffffff;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s, border-color 0.2s, transform 0.1s;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-#botonMusica:hover{
-    background: rgba(50, 50, 50, 0.7);
-    border-color: rgba(255, 255, 255, 0.28);
-    transform: scale(1.03);
-}
-
-#botonMusica:active {
-    transform: scale(0.97);
 }
 
 /* Imagen de Portada */
@@ -371,14 +286,6 @@ img{
     margin-top: 0px;
 }
 
-.Icono_Vestimenta{
-    display: flex;
-    margin: -50px auto;
-    width: 60px;           /* tamaño del icono */
-    height: auto;
-    margin-top: -30px;
-}
-
 /* Botones (Todos) */
 .boton{
     font-family: 'Cormorant Garamond', serif;
@@ -399,78 +306,6 @@ img{
 
 .boton:active {
   transform: scale(0.97);
-}
-
-/* Contador de dias que faltan para la boda */
-.contador-wrapper{
-    text-align: center;
-}
-
-.contador-wrapper h2{
-    font-family: 'Great Vibes', cursive;
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-.contador{
-    font-family: 'Italic', serif;
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    padding-bottom: 50px;
-}
-
-.contador .bloque{
-    min-width: 50px;
-    background: #ffffff;
-    border: 1px solid rgba(0,0,0,.08);
-    border-radius: 12px;
-    padding: 12px 10px;
-    box-shadow: 0 6px 14px rgba(0,0,0,.06);
-}
-
-.contador .valor{
-    display: block;
-    font-size: clamp(28px, 6vw, 48px);
-    font-weight: 700;
-    line-height: 1;
-    color: #111;
-    font-variant-numeric: tabular-nums;  /* columnas alineadas */
-}
-
-.contador small{
-    display: block;
-    margin-top: 6px;
-    color: #555;
-    letter-spacing: .3px;
-}
-
-/* Mensaje del día del evento */
-.contador-msg{
-    font-family: 'Cormorant Garamond', serif;
-    margin-top: 16px;
-    font-size: clamp(50px, 3.8vw, 20px);
-    font-weight: 600;
-    color: #2e3326;
-}
-
-/* Aparición suave */
-.contador .bloque{
-    opacity: 0;
-    transform: translateY(8px);
-    animation: fadeUp .6s ease forwards;
-}
-.contador .bloque:nth-child(2){
-    animation-delay: .05s;
-}
-.contador .bloque:nth-child(3){
-    animation-delay: .10s;
-}
-.contador .bloque:nth-child(4){
-    animation-delay: .15s;
 }
 
 .Logo_Novios{
@@ -576,28 +411,6 @@ img{
 
 /* Ayudas visuales para dispositivos móviles */
 @media (max-width:600px){
-    .modal-bienvenida{
-        padding:25px 20px;
-        max-width:300px;
-    }
-
-    .modal-bienvenida h2{
-        font-size:50px;
-    }
-
-    .modal-bienvenida h1{
-        font-size:35px;
-    }
-
-    .modal-bienvenida p{
-        font-size:20px;
-    }
-
-    .modal-bienvenida button{
-        padding:10px 22px;
-        font-size:20px;
-    }
-
     .Titulo_Cabezera h1{
         font-size:40px;
         text-shadow:3px 3px 0px black;
