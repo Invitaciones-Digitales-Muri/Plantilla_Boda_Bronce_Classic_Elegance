@@ -1,1 +1,451 @@
+/* Cuerpo del HTML */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#e4e4e4;
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
+/* Imagen de Portada */
+.Imagen_Cabezera{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.foto-portada{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    animation: zoomPortada 25s ease-in-out infinite alternate;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.2) 20%,
+        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0.6) 60%,
+        rgba(0,0,0,0.8) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+/* Nombre de los novios de portada */
+.Titulo_Cabezera{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.Titulo_Cabezera h1{
+    font-family: 'Great Vibes', cursive;
+    font-size:60px;
+    text-shadow:4px 4px 0px black;
+    white-space: nowrap;
+}
+
+/* Mensaje de los novios para los invitados */
+.Mensaje_de_los_novios{
+    padding: 0px;
+    font-size:19px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Divisor de secciones */
+.divisor{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 40px auto;
+    width:90%;
+    max-width: 100%;
+    gap: 10px;
+}
+
+.linea{
+    flex:1;
+    height:1px;
+    background:#000;
+}
+
+/* Seccion Padres */
+.Padres{
+    padding-top: 20px;
+    padding-bottom: 1px;
+}
+
+.Imagen_Novio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Ajusta según necesites */
+}
+
+.Padres_Novio h2{
+    font-family: 'Great Vibes', cursive;
+    font-size:35px;
+    margin-top: 10px;
+}
+
+.Padres_Novio p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size:19px;
+    margin-top: -25px;
+}
+
+.Imagen_Novia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Ajusta según necesites */
+}
+
+.Padres_Novia h2{
+    font-family: 'Great Vibes', cursive;
+    font-size:35px;
+    margin-top: 10px;
+}
+
+.Padres_Novia p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size:19px;
+    margin-top: -25px;
+}
+
+/* Seccion Novios */
+.Novios{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.Novios h2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+.Novios p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    margin-top: -25px;
+}
+
+/* Imagen de novios */
+.img-placeholder{
+    width:300px;
+    max-width:90%;
+    height:450px;
+    background-image: url("https://jesusmurillo31.github.io/Boda-Jesus-Stefany/images/Novios/Novios_2_300x450.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+}
+
+/* Seccion Galeria */
+.Galeria{
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+.Galeria h2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.slider{
+    position: relative;
+    max-width:500px;
+    margin:40px auto;
+    overflow:hidden;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
+}
+
+.boton_galeria{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    transition: transform .2s;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:28px;
+    padding:10px 15px;
+    cursor:pointer;
+    border-radius:50%;
+    z-index:10;
+}
+
+.boton_galeria:active{
+    transform: scale(0.9);
+}
+
+.boton_galeria:hover{
+    background:rgba(0,0,0,0.7);
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+}
+
+.atras{
+    left:10px;
+}
+
+.siguiente{
+    right:10px;
+}
+
+.slides_galeria{
+    display: flex;
+    transition: transform 1s ease;
+    will-change: transform;
+    gap: 0;                      /* sin espacios entre slides */
+    backface-visibility: hidden; /* ayuda con subpíxeles en algunos navegadores */
+    transform: translateZ(0);
+}
+
+.slide{
+    margin: 0;
+    width:100%;
+    flex:0 0 100%;
+    aspect-ratio: 2 / 3;
+    height:auto;
+    object-fit:cover;
+    display: block;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Secciones detalles del evento */
+.section{
+    padding: 20px;
+}
+
+.section h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.section h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    margin-top: -25px;
+}
+
+/* Eventos */
+.evento{
+    background:white;
+    padding:40px;
+    margin: 0 auto 30px auto;
+    border-radius:10px;
+    max-width:500px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.evento h3{
+    margin-bottom: 40px; 
+}
+
+.Icono_Iglesia{
+    display: flex;
+    margin: -50px auto;
+    width: 100px;           /* tamaño del icono */
+    height: auto;
+    margin-top: -30px;
+}
+
+.Icono_Casino{
+    display: flex;
+    margin: -50px auto;
+    width: 60px;           /* tamaño del icono */
+    height: auto;
+    margin-top: 0px;
+}
+
+/* Botones (Todos) */
+.boton{
+    font-family: 'Cormorant Garamond', serif;
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+    cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #333;
+}
+
+.boton:active {
+  transform: scale(0.97);
+}
+
+.Logo_Novios{
+    padding: 0px;
+    margin-top: -70px;
+}
+
+.Logo_Novios h2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+}
+
+.Logo_Novios p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    margin-top: -40px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+/* Confirmacion para invitados*/
+.Confirmacion{
+    padding: 0px;
+    margin: 0px;
+}
+
+.Confirmacion h2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+}
+
+.Confirmacion p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    margin-top: -15px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal.activo{
+    display:flex;
+}
+
+.modal-contenido{
+    background: white;
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    position:relative;
+}
+
+.cerrar{
+    position:absolute;
+    right:15px;
+    top:10px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.formulario-iframe{
+    width:100%;
+    height:90vh;
+    border:none;
+}
+
+/* Pie de pagina final */
+.Pie_de_pagina{
+    background-color: #000;
+    color: white;
+    padding: 1px;
+    margin-top: 0px;
+}
+
+.Pie_de_pagina p{
+    font-size: 12px;
+}
+
+/* Zoom para foto de portada en dispositivos móviles */
+@keyframes zoomPortada{
+    from{
+        transform:scale(1.05);
+    }
+    to{
+        transform:scale(1.15);
+    }
+}
+
+/* Ayudas visuales para dispositivos móviles */
+@media (max-width:600px){
+    .Titulo_Cabezera h1{
+        font-size:40px;
+        text-shadow:3px 3px 0px black;
+    }
+
+    .slider{
+        max-width:92vw;
+        margin:24px auto;
+        overflow:hidden;
+        box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
+    }
+
+    .slides_galeria{
+        display:flex;
+        transition:transform 1s ease;
+    }
+
+    .slide{
+        width:100%;
+        flex-shrink:0;
+        height:450px;
+        object-fit:cover;
+    }
+
+    .modal-contenido{
+        width:95%;
+        padding:10px;
+    }
+
+    .formulario-iframe{
+        height:70vh;
+    }
+}
+
+/* Animación para el contador */
+@keyframes fadeUp{
+  to{ opacity:1; transform:none; }
+}
