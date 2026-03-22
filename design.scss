@@ -16,12 +16,10 @@ $sombra-titulo-celular: 3px 3px 0 $color-texto-negro;
 //  Cuerpo de la pagina
 //====================================================
 body{
+    background: $color-fondo-gris-claro;
+    margin: 0px;
     width: 100%;
     height: 100%;
-    margin: 0;
-    background: $color-fondo-gris-claro;
-    padding-left: 0px;
-    padding-right: 0px;
 }
 
 //====================================================
@@ -75,7 +73,6 @@ body{
 //  Mensaje de presentacion de los novios
 //====================================================
 .Mensaje_de_los_novios{
-    padding: 0px;
     font-size: 19px;
     font-family: $fuente-texto;
     text-align: center;
@@ -85,8 +82,6 @@ body{
 //  Padres de los novios
 //====================================================
 .Padres{
-    padding-top: 20px;
-    padding-bottom: 1px;
     text-align: center;
 
     &_Novio,
@@ -119,21 +114,24 @@ body{
 .Novios{
     padding: 0px;
     margin-bottom: 0px;
+    text-align: center;
+
+    h2{
+        font-family: $fuente-titulos;
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+
+    p{
+        font-family: $fuente-texto;
+        font-size: 19px;
+        margin-top: -25px;
+    }
 }
 
-.Novios h2{
-    font-family: 'Great Vibes', cursive;
-    font-size: 45px;
-    margin-bottom: 50px;
-}
-
-.Novios p{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    margin-top: -25px;
-}
-
-/* Imagen de novios */
+//====================================================
+//  Imagen Novios (foto de los novios en la seccion de presentacion)
+//====================================================
 .img-placeholder{
     width:300px;
     max-width:90%;
@@ -147,266 +145,294 @@ body{
     box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
 }
 
-/* Seccion Galeria */
+//====================================================
+//  Galeria de fotos de novios
+//====================================================
 .Galeria{
-    padding: 10px;
-    margin-bottom: 0px;
+    text-align: center;
+
+    h2{
+        font-family: $fuente-titulos;
+        font-size: 45px;
+    }
+
+    .slider{
+        position: relative;
+        max-width:500px;
+        margin:40px auto;
+        overflow:hidden;
+        box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
+
+        .slides_galeria{
+            display: flex;
+            transition: transform 1s ease;
+            will-change: transform;
+            gap: 0;                      /* sin espacios entre slides */
+            backface-visibility: hidden; /* ayuda con subpíxeles en algunos navegadores */
+            transform: translateZ(0);
+        }
+
+        .slide{
+            margin: 0;
+            width:100%;
+            flex:0 0 100%;
+            aspect-ratio: 2 / 3;
+            height:auto;
+            object-fit:cover;
+            display: block;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .boton_galeria{
+            position:absolute;
+            top:50%;
+            transform: translateY(-50%);
+            transition: transform .2s;
+            background:rgba(0,0,0,0.5);
+            color:white;
+            border:none;
+            font-size:28px;
+            padding:10px 15px;
+            cursor:pointer;
+            border-radius:50%;
+            z-index:10;
+
+            &:active{
+                transform: scale(0.9);
+            }
+
+            &:hover{
+                background:rgba(0,0,0,0.7);
+                box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+            }
+        }
+
+        .atras{
+            left:10px;
+        }
+
+        .siguiente{
+            right:10px;
+        }
+    }
 }
 
-.Galeria h2{
-    font-family: 'Great Vibes', cursive;
-    font-size: 45px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.slider{
-    position: relative;
-    max-width:500px;
-    margin:40px auto;
-    overflow:hidden;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
-}
-
-.boton_galeria{
-    position:absolute;
-    top:50%;
-    transform: translateY(-50%);
-    transition: transform .2s;
-    background:rgba(0,0,0,0.5);
-    color:white;
-    border:none;
-    font-size:28px;
-    padding:10px 15px;
-    cursor:pointer;
-    border-radius:50%;
-    z-index:10;
-}
-
-.boton_galeria:active{
-    transform: scale(0.9);
-}
-
-.boton_galeria:hover{
-    background:rgba(0,0,0,0.7);
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
-}
-
-.atras{
-    left:10px;
-}
-
-.siguiente{
-    right:10px;
-}
-
-.slides_galeria{
-    display: flex;
-    transition: transform 1s ease;
-    will-change: transform;
-    gap: 0;                      /* sin espacios entre slides */
-    backface-visibility: hidden; /* ayuda con subpíxeles en algunos navegadores */
-    transform: translateZ(0);
-}
-
-.slide{
-    margin: 0;
-    width:100%;
-    flex:0 0 100%;
-    aspect-ratio: 2 / 3;
-    height:auto;
-    object-fit:cover;
-    display: block;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Secciones detalles del evento */
+//====================================================
+//  Cuadro de informacion del evento
+//====================================================
 .section{
-    padding: 20px;
+    text-align: center;
+
+    h2 {
+        font-family: $fuente-titulos;
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-family: $fuente-titulos;
+        font-size: 45px;
+    }
+
+    p {
+        font-family: $fuente-texto;
+        font-size: 19px;
+        margin-top: -10px;
+    }
 }
 
-.section h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 45px;
-    margin-bottom: 10px;
-    margin-top: 0px;
-}
-
-.section h3 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    margin-top: -25px;
-}
-
-/* Eventos */
+//====================================================
+//  Detalle del evento (lugar, fecha, hora, etc)
+//====================================================
 .evento{
+    text-align: center;
     background:white;
     padding:40px;
     margin: 0 auto 30px auto;
     border-radius:10px;
     max-width:500px;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+    h3{
+        margin-bottom: 20px; 
+    }
 }
 
-.evento h3{
-    margin-bottom: 40px; 
-}
-
-.Icono_Iglesia{
-    display: flex;
-    margin: -50px auto;
-    width: 100px;           /* tamaño del icono */
-    height: auto;
-    margin-top: -30px;
-}
-
+.Icono_Iglesia,
 .Icono_Casino{
     display: flex;
     margin: -50px auto;
-    width: 60px;           /* tamaño del icono */
     height: auto;
-    margin-top: 0px;
+
+    &.Icono_Iglesia{
+        width: 100px;
+        margin-top: -30px;
+    }
+
+    &.Icono_Casino{
+        width: 60px;
+        margin-top: 0px;
+    }
 }
 
-/* Botones (Todos) */
-.boton{
-    font-family: 'Cormorant Garamond', serif;
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#111;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
-    cursor: pointer;
-}
-
-.boton:hover {
-  background-color: #333;
-}
-
-.boton:active {
-  transform: scale(0.97);
-}
-
+//====================================================
+//  Logos de los novios
+//====================================================
 .Logo_Novios{
-    padding: 0px;
-    margin-top: -70px;
+    text-align: center;
+
+    h2{
+        font-family: $fuente-titulos;
+        font-size: 45px;
+    }
+
+    p{
+        font-family: $fuente-texto;
+        font-size: 45px;
+    }
 }
 
-.Logo_Novios h2{
-    font-family: 'Great Vibes', cursive;
-    font-size: 45px;
-}
-
-.Logo_Novios p{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 45px;
-    margin-top: -40px;
-    margin-bottom: 0px;
-    padding: 0px;
-}
-
-/* Confirmacion para invitados*/
+//====================================================
+//  Confirmacion de asistencia (Formulario)
+//====================================================
 .Confirmacion{
-    padding: 0px;
-    margin: 0px;
+    text-align: center;
+
+    h2{
+        font-family: $fuente-titulos;
+        font-size: 45px;
+    }
+
+    p{
+        font-family: $fuente-texto;
+        font-size: 20px;
+    }
+
+    .modal{
+        display:none;
+        position:fixed;
+        inset:0;
+        z-index:1000;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        background-color:rgba(0,0,0,0.6);
+        justify-content:center;
+        align-items:center;
+    
+        &.activo{
+            display:flex;
+        }
+
+        .modal-contenido{
+            background: white;
+            margin: auto;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 10px;
+            position:relative;
+        
+            .cerrar{
+                position:absolute;
+                right:15px;
+                top:10px;
+                font-size:28px;
+                cursor:pointer;
+            }
+
+            .formulario-iframe{
+                width:100%;
+                height:90vh;
+                border:none;
+            }
+        }
+    }
 }
 
-.Confirmacion h2{
-    font-family: 'Great Vibes', cursive;
-    font-size: 45px;
-}
-
-.Confirmacion p{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    margin-top: -15px;
-    padding-left: 1px;
-    padding-right: 1px;
-}
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:1000;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,0.6);
-    justify-content:center;
-    align-items:center;
-}
-
-.modal.activo{
-    display:flex;
-}
-
-.modal-contenido{
-    background: white;
-    margin: auto;
-    padding: 10px;
-    width: 90%;
-    max-width: 700px;
-    border-radius: 10px;
-    position:relative;
-}
-
-.cerrar{
-    position:absolute;
-    right:15px;
-    top:10px;
-    font-size:28px;
-    cursor:pointer;
-}
-
-.formulario-iframe{
-    width:100%;
-    height:90vh;
-    border:none;
-}
-
-/* Pie de pagina final */
+//====================================================
+//  Pie de pagina
+//====================================================
 .Pie_de_pagina{
+    text-align: center;
     background-color: #000;
     color: white;
-    padding: 1px;
-    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 1px;
+
+    p{
+        font-family: $fuente-texto;
+        font-size: 15px;
+    }
 }
 
-.Pie_de_pagina p{
-    font-size: 12px;
+//====================================================
+//  Botones (Todos)
+//====================================================
+.boton{
+    font-family: $fuente-texto;
+    display: inline-block;
+    margin-bottom: 0px;
+    padding: 12px 25px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius :5px;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+    cursor: pointer;
+
+    &:hover {
+        background-color: #333;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
 }
 
-/* Divisor de secciones */
+.botonFormulario{
+    font-family: $fuente-texto;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 12px 25px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius :5px;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+    cursor: pointer;
+
+    &:hover {
+        background-color: #333;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+//====================================================
+//  Division de secicones
+//====================================================
 .divisor{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 40px auto;
-    width:90%;
+    width: 90%;
     max-width: 100%;
     gap: 10px;
-}
 
-.linea{
-    flex:1;
-    height:1px;
-    background:#000;
+    .linea{
+        flex: 1;
+        height: 1px;
+        background: #000;
+    }
 }
 
 /* Zoom para foto de portada en dispositivos móviles */

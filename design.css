@@ -1,11 +1,9 @@
 @charset "UTF-8";
 body {
+  background: #e4e4e4;
+  margin: 0px;
   width: 100%;
   height: 100%;
-  margin: 0;
-  background: #e4e4e4;
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .Imagen_Cabezera {
@@ -43,15 +41,12 @@ body {
 }
 
 .Mensaje_de_los_novios {
-  padding: 0px;
   font-size: 19px;
   font-family: "Cormorant Garamond", serif;
   text-align: center;
 }
 
 .Padres {
-  padding-top: 20px;
-  padding-bottom: 1px;
   text-align: center;
 }
 .Padres_Novio h2, .Padres_Novia h2 {
@@ -76,21 +71,19 @@ body {
 .Novios {
   padding: 0px;
   margin-bottom: 0px;
+  text-align: center;
 }
-
 .Novios h2 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
   margin-bottom: 50px;
 }
-
 .Novios p {
   font-family: "Cormorant Garamond", serif;
   font-size: 19px;
   margin-top: -25px;
 }
 
-/* Imagen de novios */
 .img-placeholder {
   width: 300px;
   max-width: 90%;
@@ -104,28 +97,44 @@ body {
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
 }
 
-/* Seccion Galeria */
 .Galeria {
-  padding: 10px;
-  margin-bottom: 0px;
+  text-align: center;
 }
-
 .Galeria h2 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
-  margin-bottom: 0px;
-  margin-top: 0px;
 }
-
-.slider {
+.Galeria .slider {
   position: relative;
   max-width: 500px;
   margin: 40px auto;
   overflow: hidden;
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.8);
 }
-
-.boton_galeria {
+.Galeria .slider .slides_galeria {
+  display: flex;
+  transition: transform 1s ease;
+  will-change: transform;
+  gap: 0; /* sin espacios entre slides */
+  backface-visibility: hidden; /* ayuda con subpíxeles en algunos navegadores */
+  transform: translateZ(0);
+}
+.Galeria .slider .slide {
+  margin: 0;
+  width: 100%;
+  flex: 0 0 100%;
+  aspect-ratio: 2/3;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.Galeria .slider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.Galeria .slider .boton_galeria {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -139,76 +148,40 @@ body {
   border-radius: 50%;
   z-index: 10;
 }
-
-.boton_galeria:active {
+.Galeria .slider .boton_galeria:active {
   transform: scale(0.9);
 }
-
-.boton_galeria:hover {
+.Galeria .slider .boton_galeria:hover {
   background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
 }
-
-.atras {
+.Galeria .slider .atras {
   left: 10px;
 }
-
-.siguiente {
+.Galeria .slider .siguiente {
   right: 10px;
 }
 
-.slides_galeria {
-  display: flex;
-  transition: transform 1s ease;
-  will-change: transform;
-  gap: 0; /* sin espacios entre slides */
-  backface-visibility: hidden; /* ayuda con subpíxeles en algunos navegadores */
-  transform: translateZ(0);
-}
-
-.slide {
-  margin: 0;
-  width: 100%;
-  flex: 0 0 100%;
-  aspect-ratio: 2/3;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Secciones detalles del evento */
 .section {
-  padding: 20px;
+  text-align: center;
 }
-
 .section h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 45px;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-
-.section h3 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
   margin-bottom: 20px;
 }
-
+.section h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 45px;
+}
 .section p {
   font-family: "Cormorant Garamond", serif;
   font-size: 19px;
-  margin-top: -25px;
+  margin-top: -10px;
 }
 
-/* Eventos */
 .evento {
+  text-align: center;
   background: white;
   padding: 40px;
   margin: 0 auto 30px auto;
@@ -216,87 +189,51 @@ img {
   max-width: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .evento h3 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-.Icono_Iglesia {
-  display: flex;
-  margin: -50px auto;
-  width: 100px; /* tamaño del icono */
-  height: auto;
-  margin-top: -30px;
-}
-
+.Icono_Iglesia,
 .Icono_Casino {
   display: flex;
   margin: -50px auto;
-  width: 60px; /* tamaño del icono */
   height: auto;
+}
+.Icono_Iglesia.Icono_Iglesia,
+.Icono_Casino.Icono_Iglesia {
+  width: 100px;
+  margin-top: -30px;
+}
+.Icono_Iglesia.Icono_Casino,
+.Icono_Casino.Icono_Casino {
+  width: 60px;
   margin-top: 0px;
 }
 
-/* Botones (Todos) */
-.boton {
-  font-family: "Cormorant Garamond", serif;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #111;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
-  cursor: pointer;
-}
-
-.boton:hover {
-  background-color: #333;
-}
-
-.boton:active {
-  transform: scale(0.97);
-}
-
 .Logo_Novios {
-  padding: 0px;
-  margin-top: -70px;
+  text-align: center;
 }
-
 .Logo_Novios h2 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
 }
-
 .Logo_Novios p {
   font-family: "Cormorant Garamond", serif;
   font-size: 45px;
-  margin-top: -40px;
-  margin-bottom: 0px;
-  padding: 0px;
 }
 
-/* Confirmacion para invitados*/
 .Confirmacion {
-  padding: 0px;
-  margin: 0px;
+  text-align: center;
 }
-
 .Confirmacion h2 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
 }
-
 .Confirmacion p {
   font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
-  margin-top: -15px;
-  padding-left: 1px;
-  padding-right: 1px;
+  font-size: 20px;
 }
-
-.modal {
+.Confirmacion .modal {
   display: none;
   position: fixed;
   inset: 0;
@@ -309,48 +246,80 @@ img {
   justify-content: center;
   align-items: center;
 }
-
-.modal.activo {
+.Confirmacion .modal.activo {
   display: flex;
 }
-
-.modal-contenido {
+.Confirmacion .modal .modal-contenido {
   background: white;
   margin: auto;
-  padding: 10px;
   width: 90%;
   max-width: 700px;
   border-radius: 10px;
   position: relative;
 }
-
-.cerrar {
+.Confirmacion .modal .modal-contenido .cerrar {
   position: absolute;
   right: 15px;
   top: 10px;
   font-size: 28px;
   cursor: pointer;
 }
-
-.formulario-iframe {
+.Confirmacion .modal .modal-contenido .formulario-iframe {
   width: 100%;
   height: 90vh;
   border: none;
 }
 
-/* Pie de pagina final */
 .Pie_de_pagina {
+  text-align: center;
   background-color: #000;
   color: white;
-  padding: 1px;
-  margin-top: 0px;
+  padding-top: 20px;
+  padding-bottom: 1px;
 }
-
 .Pie_de_pagina p {
-  font-size: 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
 }
 
-/* Divisor de secciones */
+.boton {
+  font-family: "Cormorant Garamond", serif;
+  display: inline-block;
+  margin-bottom: 0px;
+  padding: 12px 25px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+.boton:hover {
+  background-color: #333;
+}
+.boton:active {
+  transform: scale(0.97);
+}
+
+.botonFormulario {
+  font-family: "Cormorant Garamond", serif;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 12px 25px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+.botonFormulario:hover {
+  background-color: #333;
+}
+.botonFormulario:active {
+  transform: scale(0.97);
+}
+
 .divisor {
   display: flex;
   align-items: center;
@@ -360,8 +329,7 @@ img {
   max-width: 100%;
   gap: 10px;
 }
-
-.linea {
+.divisor .linea {
   flex: 1;
   height: 1px;
   background: #000;
