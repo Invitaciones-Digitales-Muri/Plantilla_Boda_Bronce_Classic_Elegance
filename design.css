@@ -205,11 +205,11 @@ Portada/Encabezado con foto de los novios
     z-index: 10;
 }
 
-.boton_galeria: active{
+.boton_galeria:active{
     transform: scale(0.9);
 }
 
-.boton_galeria : hover{
+.boton_galeria:hover{
     background: rgba(0,0,0,0.7);
     box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
 }
@@ -319,11 +319,11 @@ img{
     cursor: pointer;
 }
 
-.boton : hover {
+.boton:hover {
   background-color: #333;
 }
 
-.boton : active {
+.boton:active {
   transform: scale(0.97);
 }
 

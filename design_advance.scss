@@ -80,48 +80,30 @@ body{
     font-family: $fuente-texto;
 }
 
-/* Divisor de secciones */
-.divisor{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin: 40px auto;
-    width:90%;
-    max-width: 100%;
-    gap: 10px;
-}
-
-.linea{
-    flex:1;
-    height:1px;
-    background:#000;
-}
-
-/* Seccion Padres */
+//====================================================
+//  Padres de los novios
+//====================================================
 .Padres{
     padding-top: 20px;
     padding-bottom: 1px;
+
+    &_Novio,
+    &_Novia{
+        h2{
+            font-family: $fuente-titulos;
+            font-size: 35px;
+            margin-top: 10px;
+        }
+
+        p{
+            font-family: $fuente-texto;
+            font-size: 19px;
+            margin-top: -25px;
+        }
+    }
 }
 
-.Imagen_Novio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Ajusta según necesites */
-}
-
-.Padres_Novio h2{
-    font-family: 'Great Vibes', cursive;
-    font-size:35px;
-    margin-top: 10px;
-}
-
-.Padres_Novio p{
-    font-family: 'Cormorant Garamond', serif;
-    font-size:19px;
-    margin-top: -25px;
-}
-
+.Imagen_Novio,
 .Imagen_Novia{
     display: flex;
     justify-content: center;
@@ -129,19 +111,9 @@ body{
     height: 50px; /* Ajusta según necesites */
 }
 
-.Padres_Novia h2{
-    font-family: 'Great Vibes', cursive;
-    font-size:35px;
-    margin-top: 10px;
-}
-
-.Padres_Novia p{
-    font-family: 'Cormorant Garamond', serif;
-    font-size:19px;
-    margin-top: -25px;
-}
-
-/* Seccion Novios */
+//====================================================
+//  Seccion Novios
+//====================================================
 .Novios{
     padding: 0px;
     margin-bottom: 0px;
@@ -416,6 +388,23 @@ img{
 
 .Pie_de_pagina p{
     font-size: 12px;
+}
+
+/* Divisor de secciones */
+.divisor{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 40px auto;
+    width:90%;
+    max-width: 100%;
+    gap: 10px;
+}
+
+.linea{
+    flex:1;
+    height:1px;
+    background:#000;
 }
 
 /* Zoom para foto de portada en dispositivos móviles */
