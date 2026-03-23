@@ -150,6 +150,9 @@ body{
 //====================================================
 .Galeria{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h2{
         font-family: $fuente-titulos;
@@ -159,7 +162,7 @@ body{
     .slider{
         position: relative;
         max-width:500px;
-        margin:auto;
+        margin: 15px;
         overflow:hidden;
         box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
 
@@ -454,7 +457,7 @@ body{
 
     .slider{
         max-width: 92vw;
-        margin: 10px;
+        margin: 20px auto;
         overflow: hidden;
         box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
     }
