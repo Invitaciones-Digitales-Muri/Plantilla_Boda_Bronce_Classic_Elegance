@@ -26,7 +26,7 @@ body {
 }
 .Imagen_Cabezera .Titulo_Cabezera {
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -98,6 +98,7 @@ body {
 }
 
 .Galeria {
+  margin-top: -40px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -167,11 +168,14 @@ body {
 
 .section {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .section h2 {
   font-family: "Great Vibes", cursive;
   font-size: 45px;
-  margin-bottom: 20px;
+  margin: 0px 0px 20px 0px;
 }
 .section h3 {
   font-family: "Great Vibes", cursive;
@@ -187,7 +191,7 @@ body {
   text-align: center;
   background: white;
   padding: 40px;
-  margin: 0 auto 30px auto;
+  margin: 15px 15px 15px 15px;
   border-radius: 10px;
   max-width: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -277,7 +281,7 @@ body {
   text-align: center;
   background-color: #000;
   color: white;
-  padding-top: 20px;
+  padding-top: 1px;
   padding-bottom: 1px;
 }
 .Pie_de_pagina p {
