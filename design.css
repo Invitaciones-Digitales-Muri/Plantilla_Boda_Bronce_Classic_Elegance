@@ -69,8 +69,6 @@ body {
 }
 
 .Novios {
-  padding: 0px;
-  margin-bottom: 0px;
   text-align: center;
 }
 .Novios h2 {
@@ -80,7 +78,7 @@ body {
 }
 .Novios p {
   font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
+  font-size: 25px;
   margin-top: -25px;
 }
 
@@ -344,7 +342,6 @@ body {
   background: #000;
 }
 
-/* Zoom para foto de portada en dispositivos móviles */
 @keyframes zoomPortada {
   from {
     transform: scale(1.05);
@@ -353,7 +350,6 @@ body {
     transform: scale(1.15);
   }
 }
-/* Ayudas visuales para dispositivos móviles */
 @media (max-width: 600px) {
   .Titulo_Cabezera h1 {
     font-size: 55px;
@@ -382,12 +378,5 @@ body {
   }
   .formulario-iframe {
     height: 70vh;
-  }
-}
-/* Animación para el contador */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: none;
   }
 }/*# sourceMappingURL=design.css.map */

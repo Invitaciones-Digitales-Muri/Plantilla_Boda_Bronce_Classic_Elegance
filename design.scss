@@ -115,19 +115,17 @@ body{
 //  Seccion Novios
 //====================================================
 .Novios{
-    padding: 0px;
-    margin-bottom: 0px;
     text-align: center;
 
     h2{
         font-family: $fuente-titulos;
-        font-size: 45px;
+        font-size: $size-titulos;
         margin-bottom: 50px;
     }
 
     p{
         font-family: $fuente-texto;
-        font-size: 19px;
+        font-size: $size-texto;
         margin-top: -25px;
     }
 }
@@ -447,7 +445,9 @@ body{
     }
 }
 
-/* Zoom para foto de portada en dispositivos móviles */
+//====================================================
+//  Zoom para dispositivos moviles
+//====================================================
 @keyframes zoomPortada{
     from{
         transform:scale(1.05);
@@ -457,7 +457,9 @@ body{
     }
 }
 
-/* Ayudas visuales para dispositivos móviles */
+//====================================================
+//  Ayudas visuales para dispositivos moviles
+//====================================================
 @media (max-width:600px){
     .Titulo_Cabezera h1{
         font-size: 55px;
@@ -491,9 +493,4 @@ body{
     .formulario-iframe{
         height: 70vh;
     }
-}
-
-/* Animación para el contador */
-@keyframes fadeUp{
-  to{ opacity:1; transform:none; }
 }

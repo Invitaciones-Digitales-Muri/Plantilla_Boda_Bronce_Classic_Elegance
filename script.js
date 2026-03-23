@@ -20,12 +20,3 @@ function moverSlide(direccion){
 
   slides.style.transform = `translateX(-${index * 100}%)`;
 }
-
-  // Abrir formulario de confirmacion
-function abrirFormulario(){
-    document.getElementById("modalFormulario").classList.add("activo");
-}
-
-function cerrarFormulario(){
-    document.getElementById("modalFormulario").classList.remove("activo");
-}
