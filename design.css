@@ -238,14 +238,17 @@ body {
   text-align: center;
 }
 .Logo_Novios h2 {
+  white-space: nowrap;
   font-family: "Great Vibes", cursive;
   font-size: 45px;
   margin: 0px;
+  text-shadow: 4px 4px 0 #000;
 }
 .Logo_Novios p {
   font-family: "Cormorant Garamond", serif;
   font-size: 45px;
   margin: 0px;
+  text-shadow: 4px 4px 0 #000;
 }
 
 .Confirmacion {
@@ -338,7 +341,23 @@ body {
 @media (max-width: 600px) {
   .Titulo_Cabezera h1 {
     font-size: 55px;
-    text-shadow: 3px 3px 0px black;
+    text-shadow: 3px 3px 0 #000;
+  }
+  .Logo_Novios {
+    text-align: center;
+  }
+  .Logo_Novios h2 {
+    white-space: nowrap;
+    font-family: "Great Vibes", cursive;
+    font-size: 45px;
+    margin: 0px;
+    text-shadow: 3px 3px 0 #000;
+  }
+  .Logo_Novios p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 45px;
+    margin: 0px;
+    text-shadow: 3px 3px 0 #000;
   }
   .slider {
     max-width: 92vw;

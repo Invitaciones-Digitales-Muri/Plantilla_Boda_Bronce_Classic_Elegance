@@ -313,15 +313,18 @@ body{
     text-align: center;
 
     h2{
+        white-space: nowrap;
         font-family: $fuente-titulos;
         font-size: $size-titulos;
         margin: 0px;
+        text-shadow: $sombra-titulo-pc;
     }
 
     p{
         font-family: $fuente-texto;
         font-size: $size-titulos;
         margin: 0px;
+        text-shadow: $sombra-titulo-pc;
     }
 }
 
@@ -442,7 +445,26 @@ body{
 @media (max-width:600px){
     .Titulo_Cabezera h1{
         font-size: 55px;
-        text-shadow: 3px 3px 0px black;
+        text-shadow: $sombra-titulo-celular;
+    }
+
+    .Logo_Novios{
+        text-align: center;
+
+        h2{
+            white-space: nowrap;
+            font-family: $fuente-titulos;
+            font-size: $size-titulos;
+            margin: 0px;
+            text-shadow: $sombra-titulo-celular;
+        }
+
+        p{
+            font-family: $fuente-texto;
+            font-size: $size-titulos;
+            margin: 0px;
+            text-shadow: $sombra-titulo-celular;
+        }
     }
 
     .slider{
