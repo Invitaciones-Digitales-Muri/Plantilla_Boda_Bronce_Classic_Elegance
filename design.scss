@@ -40,7 +40,7 @@ body{
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transform: scale(1.05);
+        transform: scale(1);
         animation: zoomPortada 25s ease-in-out infinite alternate;
     }
     
@@ -88,7 +88,7 @@ body{
 }
 
 //====================================================
-//  Mensaje de presentacion de los novios
+//  Mensaje de presentacion
 //====================================================
 .Mensaje_de_los_novios{
     padding: 0;
@@ -104,9 +104,9 @@ body{
     margin-bottom: 0;
 
     h2{
-        font-family: $font-texto;
-        font-size: $size-texto;
-        margin-top: -25px;
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+        margin-top: 50px;
     }
 
     p{
@@ -365,6 +365,8 @@ body{
     p{
         font-family: $font-texto;
         font-size: $size-texto;
+        margin-top: -15px;
+        padding: 0 1px;
     }
 }
 
@@ -373,14 +375,13 @@ body{
 //====================================================
 .Pie_de_pagina{
     text-align: center;
-    background-color: #000;
-    color: white;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    background-color: $color-negro;
+    color: $color-blanco;
+    padding: 1px;
+    margin-top: 25px;
 
     p{
-        font-family: $font-texto;
-        font-size: 17px;
+        font-size: 15px;
     }
 }
 
@@ -432,7 +433,25 @@ body{
     .linea{
         flex: 1;
         height: 1px;
-        background: #000;
+        background: $color-negro;
+    }
+}
+
+//====================================================
+//  Animaciones
+//====================================================
+@keyframes scrollAnim{
+    0%{
+        transform: rotate(45deg) translate(0, 0);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(45deg) translate(5px, 5px);
+        opacity: 0;
     }
 }
 
@@ -441,10 +460,25 @@ body{
 //====================================================
 @keyframes zoomPortada{
     from{
-        transform:scale(1.05);
+        transform:scale(1);
     }
     to{
-        transform:scale(1.15);
+        transform:scale(1.1);
+    }
+}
+
+//====================================================
+//  Ayudas visuales para PC
+//====================================================
+@media (min-width: 901px){
+    .Imagen_Cabezera{
+        height: 85vh;
+
+        .foto-portada{
+            object-position: center 20%;
+            transform: none;
+            animation: none;
+        }
     }
 }
 
@@ -452,26 +486,14 @@ body{
 //  Ayudas visuales para dispositivos moviles
 //====================================================
 @media (max-width:600px){
-    .Titulo_Cabezera h1{
-        font-size: 55px;
-        text-shadow: $shadow-titulo-movil;
-    }
-
-    .Logo_Novios{
-        text-align: center;
-
-        h2{
-            white-space: nowrap;
-            font-family: $font-titulos;
-            font-size: $size-titulos;
-            margin: 0px;
+    .Titulo_Cabezera{
+        h1{
+            font-size: 60px;
             text-shadow: $shadow-titulo-movil;
         }
 
         p{
-            font-family: $font-texto;
-            font-size: $size-titulos;
-            margin: 0px;
+            font-size: 50px;
             text-shadow: $shadow-titulo-movil;
         }
     }
@@ -493,5 +515,10 @@ body{
         flex-shrink: 0;
         height: 450px;
         object-fit: cover;
+    }
+
+    // Scroll indicator
+    .scroll-indicator{
+        margin-top: 8px;
     }
 }
